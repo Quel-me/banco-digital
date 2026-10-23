@@ -1,7 +1,7 @@
 public class Conta {
-  String titular;
-  int numero;
-  double saldo;
+  private String titular;
+  private int numero;
+  private double saldo;
 
   public Conta(String titular, int numero) {
     this.titular = titular;
@@ -24,4 +24,17 @@ public class Conta {
     saldo -= valor;
     return true;
   }
+
+  public String getTitular() {
+    return titular;
+  }
+
+  public int getNumero() {
+    return numero;
+  }
+
+  public double getSaldo() {
+    return saldo;
+  }
+
 }
