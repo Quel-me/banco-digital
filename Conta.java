@@ -37,4 +37,15 @@ public class Conta {
     return saldo;
   }
 
+  public boolean transferir(Conta destino, double valor) {
+    if (destino == null || destino == Conta.this) {
+      return false;
+    }
+
+    if (!sacar(valor)) {
+      return false;
+    } 
+    destino.depositar(valor);
+    return true;
+  }
 }
